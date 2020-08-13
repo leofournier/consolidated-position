@@ -1,5 +1,12 @@
-﻿using Microsoft.AspNetCore;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace Consolidated.Position
 {
@@ -17,12 +24,9 @@ namespace Consolidated.Position
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        /// <summary>
-        /// Construtor do host
-        /// </summary>
-        /// <param name="args">Parametro de entrada</param>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .ConfigureLogging(config => { config.SetMinimumLevel(LogLevel.Information); });
     }
 }

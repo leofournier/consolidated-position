@@ -6,35 +6,35 @@ namespace Consolidated.Position.Domain
     /// <summary>Classe de Tesouro Direto</summary>
     public class TesouroDireto
     {
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Lista de Papeis do Tesouro Direto</summary>
         public List<Papel> Papeis { get; set; }
     }
 
-    /// <summary>Valor de Capital Investido</summary>
+    /// <summary>Papel do Tesouro Direto</summary>
     public class Papel
     {
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Valor Investido no Papel</summary>
         public decimal ValorInvestido { get; set; }
        
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Valor Total Financeiro</summary>
         public decimal ValorTotal { get; set; }
        
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Data de Vencimento do Papel</summary>
         public DateTime DataVencimento { get; set; }
       
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Data de Compra do Papel</summary>
         public DateTime DataDeCompra { get; set; }
       
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Imposto sobre a operação</summary>
         public decimal Iof { get; set; }
        
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Indice do papel</summary>
         public string Indice { get; set; }
       
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Tipo do Papel</summary>
         public string Tipo { get; set; }
       
-        /// <summary>Valor de Capital Investido</summary>
+        /// <summary>Nome do Papel</summary>
         public string Nome { get; set; }
     }
 }
