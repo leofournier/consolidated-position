@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consolidated.Position.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consolidated.Position.ExternalService", "Consolidated.Position.ExternalService\Consolidated.Position.ExternalService.csproj", "{5412B1B6-655C-45AB-9B24-E9C1192713D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consolidated.Position.Domain", "Consolidated.Position.Domain\Consolidated.Position.Domain.csproj", "{A69E85AF-92B7-442F-82C9-C7D327DF8DDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5412B1B6-655C-45AB-9B24-E9C1192713D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5412B1B6-655C-45AB-9B24-E9C1192713D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5412B1B6-655C-45AB-9B24-E9C1192713D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69E85AF-92B7-442F-82C9-C7D327DF8DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69E85AF-92B7-442F-82C9-C7D327DF8DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69E85AF-92B7-442F-82C9-C7D327DF8DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69E85AF-92B7-442F-82C9-C7D327DF8DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
