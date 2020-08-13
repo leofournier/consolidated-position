@@ -3,3 +3,10 @@
 ################################################################################
 
 /Consolidated.Position/Consolidated.Position/obj
+/Consolidated.Position/Consolidated.Position/bin/Debug/netcoreapp2.1
+/Consolidated.Position/Consolidated.Position.Business/obj
+/Consolidated.Position/Consolidated.Position.Business/bin/Debug/netstandard2.0
+/Consolidated.Position/Consolidated.Position.ExternalService/bin/Debug/netstandard2.0
+/Consolidated.Position/Consolidated.Position.ExternalService/obj
+/Consolidated.Position/Consolidated.Position.Test/bin/Debug/netcoreapp3.1
+/Consolidated.Position/Consolidated.Position.Test/obj
