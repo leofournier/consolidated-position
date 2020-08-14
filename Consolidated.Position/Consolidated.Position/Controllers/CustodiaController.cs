@@ -49,5 +49,56 @@ namespace Consolidated.Position.Controllers
 
             return await cacheEntry;
         }
+
+        /// <summary>Obtém posição em Tesouro Direto</summary>     
+        [Authorize("Bearer")]
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ObterPosicaoTesouroDireto()
+        {
+            var cacheEntry = _cache.GetOrCreate("PositionTDCacheKey", async entry =>
+            {
+                entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(1);
+                entry.SetPriority(CacheItemPriority.High);
+
+                var retorno = await PositionBusiness.GerarPosicaoTesouroDireto();
+                return Ok(retorno);
+            });
+
+            return await cacheEntry;
+        }
+
+        /// <summary>Obtém posição em Renda Fixa</summary>     
+        [Authorize("Bearer")]
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ObterPosicaoRendaFixa()
+        {
+            var cacheEntry = _cache.GetOrCreate("PositionRFCacheKey", async entry =>
+            {
+                entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(1);
+                entry.SetPriority(CacheItemPriority.High);
+
+                var retorno = await PositionBusiness.GerarPosicaoRendaFixa();
+                return Ok(retorno);
+            });
+
+            return await cacheEntry;
+        }
+
+        /// <summary>Obtém posição em Fundos de Investimento</summary>     
+        [Authorize("Bearer")]
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ObterPosicaoFundosInvestimentos()
+        {
+            var cacheEntry = _cache.GetOrCreate("PositionFICacheKey", async entry =>
+            {
+                entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(1);
+                entry.SetPriority(CacheItemPriority.High);
+
+                var retorno = await PositionBusiness.GerarPosicaoFundos();
+                return Ok(retorno);
+            });
+
+            return await cacheEntry;
+        }
     }
 }
