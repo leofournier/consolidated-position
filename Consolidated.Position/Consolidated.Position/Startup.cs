@@ -80,7 +80,7 @@ namespace Consolidated.Position
             });
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            services.AddMemoryCache();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consolidated.Position.API", Version = "v1" });
