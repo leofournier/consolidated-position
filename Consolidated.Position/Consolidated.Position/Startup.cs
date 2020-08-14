@@ -11,6 +11,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
 using Microsoft.AspNetCore.Authorization;
+using Consolidated.Position.ExternalService;
+using Consolidated.Position.Business;
 
 namespace Consolidated.Position
 {
@@ -76,13 +78,16 @@ namespace Consolidated.Position
             {
                 options.AddPolicy("AllowAnyCorsPolicy", policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             });
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consolidated.Position.API", Version = "v1" });
             });
+
+            services.AddScoped<IPositionService, PositionService>();
+            services.AddScoped<IPositionBusiness, PositionBusiness>();
         }
 
         /// <summary>This method gets called by the runtime. Use this method to configure the HTTP request pipeline.</summary>

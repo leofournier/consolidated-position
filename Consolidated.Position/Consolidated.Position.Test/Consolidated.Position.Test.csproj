@@ -11,6 +11,15 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Consolidated.Position.Business\Consolidated.Position.Business.csproj" />
+    <ProjectReference Include="..\Consolidated.Position.ExternalService\Consolidated.Position.ExternalService.csproj" />
+    <ProjectReference Include="..\Consolidated.Position\Consolidated.Position.csproj" />
   </ItemGroup>
 
 </Project>

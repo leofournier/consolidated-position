@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Consolidated.Position.Business\Consolidated.Position.Business.csproj" />
     <ProjectReference Include="..\Consolidated.Position.Domain\Consolidated.Position.Domain.csproj" />
   </ItemGroup>
 
